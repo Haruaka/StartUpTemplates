@@ -1,0 +1,111 @@
+:root {
+    --primary-color-main: #651fff;
+    --primary-color-light: #834bff;
+    --primary-color-dark: #651fff;
+    --text-color: #212121;
+    --sec-text-color: white;
+    --spacing: 2rem;
+    --main-font: 'Ubuntu', sans-serif;
+}
+
+body {
+    font-family: var(--main-font);
+}
+
+nav {
+    background-color: var(--primary-color-main);
+    padding: var(--spacing);
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a, nav p{
+    color: var(--sec-text-color);
+}
+
+footer {
+    background-color: var(--primary-color-dark);
+    padding: var(--spacing);
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--primary-color-main);
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color-main);
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--primary-color-main);
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--primary-color-main);
+}
+
+p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+
+
+/* Custom CSS Classes */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.intro {
+    background-color: var(--primary-color-main);
+    width: 100%;
+    padding: var(--spacing);
+    min-height: 10rem;
+}
+
+.bottom {
+    background-color: var(--primary-color-main);
+    border-bottom-left-radius:50%;
+    border-bottom-right-radius:50%;
+    height: 10rem;
+    margin-bottom: 2rem;
+}
+
+/*.intro:after {
+    content: '';
+    border-radius: 100rem;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--primary-color-main);
+    z-index: -1;
+}*/
+
+.intro h1, .intro h2, .intro h3, .intro h4 {
+    color: var(--sec-text-color);
+}
