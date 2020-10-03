@@ -17,6 +17,10 @@ nav {
     padding: var(--spacing);
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
 }
 
 nav ul {
@@ -29,13 +33,25 @@ nav li {
     display: inline;
 }
 
+nav li:not(:last-child){
+    margin-right: 1rem;
+}
+
 nav a, nav p{
+    text-decoration: none;
     color: var(--sec-text-color);
+    font-weight: 600;
+}
+
+nav a:hover {
+    opacity: 0.9;
 }
 
 footer {
     background-color: var(--primary-color-dark);
     padding: var(--spacing);
+    color: var(--sec-text-color);
+    text-align: right;
 }
 
 h1 {
@@ -69,6 +85,22 @@ p {
     color: var(--text-color);
 }
 
+button {
+    background-color: var(--primary-color-main);
+    color: var(--sec-text-color);
+    border-radius: 10rem;
+    border: none;
+    box-shadow: none;
+    min-width: 15rem;
+    min-height: 2.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
 
 
 /* Custom CSS Classes */
@@ -82,30 +114,104 @@ p {
 .intro {
     background-color: var(--primary-color-main);
     width: 100%;
-    padding: var(--spacing);
+    padding: 9rem var(--spacing) var(--spacing) var(--spacing);
     min-height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.bottom {
+.roundedBottom {
     background-color: var(--primary-color-main);
-    border-bottom-left-radius:50%;
-    border-bottom-right-radius:50%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    height: 5rem;
+    margin-bottom: var(--spacing);
+}
+
+.roundedBottomWhite {
+    background-color: var(--sec-text-color);
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    height: 5rem;
+    margin-bottom: var(--spacing);
+}
+
+.intro h1, .intro h2, .intro h3, .intro h4, .intro p{
+    color: var(--sec-text-color);
+}
+
+.intro p {
+    font-style: italic;
+    text-align: center;
+    margin: 1rem var(--spacing) var(--spacing) var(--spacing);
+}
+
+.intro button {
+    background-color: var(--sec-text-color);
+    color: var(--primary-color-main);
+}
+
+.intro svg{
     height: 10rem;
-    margin-bottom: 2rem;
+    width: 10rem;
+    color: var(--sec-text-color);
 }
 
-/*.intro:after {
-    content: '';
-    border-radius: 100rem;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--primary-color-main);
-    z-index: -1;
-}*/
+.container-item {
+    display: flex;
+    padding: 6rem var(--spacing);
+    margin: var(--spacing) 0;
+    align-items: center;
+    justify-content: space-between;
+}
 
-.intro h1, .intro h2, .intro h3, .intro h4 {
+.container-item h2{
+    margin-bottom: var(--spacing);
+}
+
+.container-item .desc {
+    max-width: 35rem;
+    margin-right: var(--spacing);
+    padding: var(--spacing);
+}
+
+.list {
+    display: flex;
+    padding: 6rem 4rem;
+    margin: var(--spacing) 0;
+    justify-content: space-between;
+    align-items: baseline;
+    text-align: center;
+}
+
+.list .col {
+    max-width: 20rem;
+}
+
+.list .col img {
+    height: 20rem;
+    width: 20rem;
+    padding-bottom: var(--spacing);
+}
+
+.list p {
+    margin-top: 1rem;
+    margin-bottom: var(--spacing);
+}
+
+.container-item img {
+    height: 25rem;
+    width: 30rem;
+    margin-right: var(--spacing);
+}
+
+.purple {
+    padding: 6rem var(--spacing);
+    background-color: var(--primary-color-main);
+}
+
+.purple h2, .purple p {
     color: var(--sec-text-color);
 }
